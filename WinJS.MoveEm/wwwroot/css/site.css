@@ -1,0 +1,59 @@
+﻿/*
+Copyright (c) Microsoft Corporation. All rights reserved
+*/
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+    button.splitViewButton:hover {
+        background-color: rgba(255,255,255, 0.1);
+    }
+
+    button.splitViewButton:active {
+        background-color: rgba(255,255,255, 0.2);
+    }
+
+    button.splitViewButton:after {
+        position: relative;
+        font-size: 24px;
+        font-family: 'Segoe MDL2 Assets';
+        content: "\E700";
+    }
+
+#contentHost {
+    margin: 10px;
+    height: 100%;
+    overflow-y: auto;
+}
+.content, #app {
+    height: 100%;
+}
+
+    #app .win-splitviewpanetoggle {
+        float: left;
+    }
+
+    /* SplitView pane content style*/
+    #app .header {
+        white-space: nowrap;
+    }
+
+    #app .title {
+        font-size: 25px;
+        left: 50px;
+        margin-top: 6px;
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    #app .nav-commands {
+        margin-top: 20px;
+    }
+.command-item {
+    margin:0;
+}
+
+#scenarioControl .win-container {
+    margin:0;
+}

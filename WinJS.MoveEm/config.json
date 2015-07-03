@@ -1,0 +1,10 @@
+{
+  "AppSettings": {
+    "SiteTitle": "WinJS.MoveEm"
+  },
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-WinJS.MoveEm-6586a28a-13af-476a-ab51-760ef9c25314;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  }
+}

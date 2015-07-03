@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="lib/winjs/js/base.js"></script>
+    <script src="lib/winjs/js/ui.js"></script>
+    <script src="default.js"></script>
+    <link rel="stylesheet" href="lib/winjs/css/ui-dark.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <div class="splitView" id="root" data-win-control="WinJS.UI.SplitView">
+            <!-- Pane area -->
+            <div>
+                <div class="header">
+                    <button class="win-splitviewpanetoggle"
+                            data-win-control="WinJS.UI.SplitViewPaneToggle"
+                            data-win-options="{ splitView: select('.splitView') }"></button>
+                    <div class="title">SplitView Pane area</div>
+                </div>
+                <div class="nav-commands" id="scenarioPane" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/controls/sidemenu/sidemenu.html'}"></div>
+            </div> <!-- Content area -->
+            <div id="contentWrapper">
+                <div id="contentHost">
+                    <div id="statusBox">
+                        Status:
+                        <div id="statusMessage"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
