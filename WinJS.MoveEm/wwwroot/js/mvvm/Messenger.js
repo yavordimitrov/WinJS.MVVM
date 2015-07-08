@@ -10,17 +10,9 @@
         },
         send: function (eventInfo) {
             WinJS.Application.queueEvent(eventInfo);
-        }
+        },
+
+        navigatedBack: function () { return { type: "navigatedBack", uri: null }; },
     });
 
 })();
-
-
-
-(function () {
-    WinJS.UI.processAll();
-})();
-
-window.onerror = function (E) {
-    debugger;
-}

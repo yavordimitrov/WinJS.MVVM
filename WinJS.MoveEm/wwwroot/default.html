@@ -4,9 +4,22 @@
     <meta charset="utf-8" />
     <script src="lib/winjs/js/base.js"></script>
     <script src="lib/winjs/js/ui.js"></script>
+
+
+    <script src="controls/navigator/Navigator.js"></script>
+    <script src="js/data/DataService.js"></script>
+    <script src="js/mvvm/BindingExtensions.js"></script>
+    <script src="js/mvvm/ViewModelLocatorBase.js"></script>
+    <script src="js/mvvm/Messenger.js"></script>
+    <script src="js/mvvm/RelayCommand.js"></script>
+    <script src="js/ApplicationViewModelLocator.js"></script>
+    <script src="js/mvvm/NavigationService.js"></script>
+    
     <script src="default.js"></script>
+    
     <link rel="stylesheet" href="lib/winjs/css/ui-dark.css" />
     <link rel="stylesheet" href="css/site.css" />
+    
     <title></title>
 </head>
 <body>
@@ -21,18 +34,10 @@
                     <div class="title">SplitView Pane area</div>
                 </div>
                 <div class="nav-commands" id="scenarioPane" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/controls/sidemenu/sidemenu.html'}"></div>
-            </div> <!-- Content area -->
-            <div id="contentWrapper">
-                <div id="contentHost">
-                    <div id="statusBox">
-                        Status:
-                        <div id="statusMessage"></div>
-                    </div>
-                </div>
-
+            </div>
+            <div data-win-control="Application.PageNavigator">
             </div>
         </div>
     </div>
-
 </body>
 </html>

@@ -2,6 +2,7 @@
     "name": "ASP.NET",
     "private": true,
     "dependencies": {
-        "winjs": "4.0.1"
+        "winjs": "4.0.1",
+        "requirejs": "2.1.18"
     }
 }

@@ -4,8 +4,28 @@
     <meta charset="utf-8" />
     <title></title>
     <script src="list.js"></script>
+    <script src="../../js/ViewModels/PersonViewModel.js"></script>
 </head>
 <body>
-    <span>some data just for kicks</span>
+    <div>
+        <div id="listItem" data-win-control="WinJS.Binding.Template" style="display: none;">
+            <span data-win-bind="textContent:FirstName"></span> <br />
+            <span data-win-bind="textContent:LastName"></span> <br />
+
+        </div>
+    </div>
+    <div class="listView win-selectionstylefilled"
+         data-win-control="WinJS.UI.ListView"
+         data-win-options="{
+            itemTemplate: select('#listItem'),
+            selectionMode: 'none',
+            tapBehavior: 'none',
+            layout: { type: WinJS.UI.ListLayout }
+        }"
+        data-win-bind="winControl.itemDataSource: persons.dataSource">
+    </div>
+    <button data-win-control="WinJS.UI.AppBarCommand"
+            data-win-bind="onclick:loadPersonsCommand Binding.Mode.command"
+            data-win-options="{icon:'home', id:'', label:'Home', section:'global', type:'button'}"></button>
 </body>
 </html>
