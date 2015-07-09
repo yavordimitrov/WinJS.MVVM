@@ -18,12 +18,12 @@ namespace WinJS.MoveEm.Controllers
         };
 
         [HttpGet]
-        public Person Get()
+        public IActionResult Get()
         {
             Response.Headers.Add("Expires", new string[] { "Thu, 01 Dec 1994 16:00:00 GMT" });
             Random rnd = new Random();
             int i = rnd.Next(0, 5);
-            return Persons[i];
+            return Json(Persons[i]);
         }
 
     }

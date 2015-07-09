@@ -12,7 +12,12 @@
                             "Accept": "application/json"
                         }
                     }).then(function (data) {
-                        c(JSON.parse(data.response));
+                        if (typeof (data.response) === 'string') {
+                            c(JSON.parse(data.response));
+                        }
+                        else {
+                            c(data.response);
+                        }
                     });
                 });
 

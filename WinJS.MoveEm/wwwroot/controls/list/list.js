@@ -4,7 +4,8 @@
     "use strict";
     WinJS.UI.Pages.define("/controls/list/list.html", {
         ready: function (element, options) {
-            WinJS.Binding.processAll(element,new ViewModels.PersonsViewModel());
+            var model = Application.ViewModelLocator.createViewModelForTarget('PersonsViewModel');
+            WinJS.Binding.processAll(element,model);
         }
     });
 })();

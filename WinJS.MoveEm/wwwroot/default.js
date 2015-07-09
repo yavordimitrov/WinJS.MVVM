@@ -1,24 +1,9 @@
-﻿(function () {
-    "use strict";
-
-    WinJS.Namespace.define("WinJS.Mvvm.Messenger", {
-        register: function (message, callback) {
-            WinJS.Application.addEventListener(message.type, callback);
-        },
-        unregister: function (message, callback) {
-            WinJS.Application.removeEventListener(message.type, callback);
-        },
-        send: function (eventInfo) {
-            WinJS.Application.queueEvent(eventInfo);
-        }
-    });
-
-})();
-
-
-
+﻿/// <reference path="lib/winjs/js/ui.js" />
+/// <reference path="lib/winjs/js/base.js" />
 (function () {
-    WinJS.UI.processAll();
+    WinJS.UI.processAll().done(function () {
+        WinJS.Navigation.navigate('/controls/home/home.html');
+    });
 })();
 
 window.onerror = function (E) {

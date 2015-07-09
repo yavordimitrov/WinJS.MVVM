@@ -13,7 +13,6 @@
     <script src="js/mvvm/Messenger.js"></script>
     <script src="js/mvvm/RelayCommand.js"></script>
     <script src="js/ApplicationViewModelLocator.js"></script>
-    <script src="js/mvvm/NavigationService.js"></script>
     
     <script src="default.js"></script>
     
@@ -33,9 +32,10 @@
                             data-win-options="{ splitView: select('.splitView') }"></button>
                     <div class="title">SplitView Pane area</div>
                 </div>
+                <button data-win-control="WinJS.UI.BackButton"></button>
                 <div class="nav-commands" id="scenarioPane" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/controls/sidemenu/sidemenu.html'}"></div>
             </div>
-            <div data-win-control="Application.PageNavigator">
+            <div data-win-control="Application.PageNavigator" data-win-options="{home: '/pages/home/home.html'}">
             </div>
         </div>
     </div>
