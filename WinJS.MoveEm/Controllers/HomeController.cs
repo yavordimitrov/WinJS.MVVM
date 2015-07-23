@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
+using Microsoft.AspNet.SignalR.Infrastructure;
+using WinJS.MoveEm.Hubs;
 
 namespace WinJS.MoveEm.Controllers
 {
-    [Route("api/[controller]")]
+    
     public class HomeController : Controller
     {
         private List<Person> Persons = new List<Person> {
@@ -24,6 +26,11 @@ namespace WinJS.MoveEm.Controllers
             Random rnd = new Random();
             int i = rnd.Next(0, 5);
             return Json(Persons[i]);
+        }
+
+        public IActionResult Add()
+        {
+            return View();
         }
 
     }

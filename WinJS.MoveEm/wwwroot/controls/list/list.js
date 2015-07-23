@@ -5,7 +5,7 @@
     WinJS.UI.Pages.define("/controls/list/list.html", {
         ready: function (element, options) {
             var model = Application.ViewModelLocator.createViewModelForTarget('PersonsViewModel');
-            WinJS.Binding.processAll(element,model);
+            WinJS.Binding.processAll(element, model);
         }
     });
 })();

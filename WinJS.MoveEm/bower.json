@@ -1,8 +1,9 @@
 {
-    "name": "ASP.NET",
-    "private": true,
-    "dependencies": {
-        "winjs": "4.0.1",
-        "requirejs": "2.1.18"
-    }
+  "name": "ASP.NET",
+  "private": true,
+  "dependencies": {
+    "winjs": "4.0.1",
+    "requirejs": "2.1.18",
+    "signalr": "2.2.0"
+  }
 }

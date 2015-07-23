@@ -7,19 +7,20 @@
         PersonsViewModel: WinJS.Class.define(function () {
             this._dataService = new Application.Data.dataService();
             this.persons = new WinJS.Binding.List([{ FirstName: "GG", LastName: "WP" }]);
+            this._realtimeService = new Application.Realtime.realtimeService();
+            this._realtimeService.addEventListener("messagereceived", this.messageReceived.bind(this));
         },
         {
             _dataService: null,
+            _realtimeService: null,
             persons: null,
-            loadPersonsCommand: new WinJS.Mvvm.RelayCommand(function (element) {
-                this.loadPersonsCommand.canExecute.value = false;
-                var that = this;
-                this._dataService.getPersons().done(function (data) {
-                    that.persons.push(data);
-                });
 
-                this.loadPersonsCommand.canExecute.value = true;
+            loadPersonsCommand: new WinJS.Mvvm.RelayCommand(function (element) {
+                this._realtimeService.send("stuff", "you");
             }),
+            messageReceived: function (args) {
+                this.persons.push(args.detail.FirstName, args.detail.LastName);
+            }
         })
     });
 })();

@@ -1,4 +1,5 @@
 ﻿(function () {
+
     WinJS.Namespace.define("Application.Data", {
         dataService: WinJS.Class.define(null, {
             getPersons: function () {

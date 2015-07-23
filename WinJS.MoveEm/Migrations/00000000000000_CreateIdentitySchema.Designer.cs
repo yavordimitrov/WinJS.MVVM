@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,9 +10,19 @@ using WinJS.MoveEm.Models;
 namespace WebApplication1.Migrations
 {
     [ContextType(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    partial class CreateIdentitySchema
     {
-        public override void BuildModel(ModelBuilder builder)
+        public override string Id
+        {
+            get { return "00000000000000_CreateIdentitySchema"; }
+        }
+
+        public override string ProductVersion
+        {
+            get { return "7.0.0-beta5"; }
+        }
+
+        public override void BuildTargetModel(ModelBuilder builder)
         {
             builder
                 .Annotation("SqlServer:ValueGeneration", "Identity");
